@@ -12,9 +12,9 @@ const Card = ({ card }) => (
 )
 
 export default function App() {
-  const [index, setIndex] = useState(0); // Change this line
+  const [index, setIndex] = useState(0);
   const onSwiped = () => {
-    setIndex((index + 1) % data.length);
+    setIndex((index + 1) % data.length); //for the number of cards
   }
   return (
     <View style={styles.container}>
@@ -34,7 +34,7 @@ export default function App() {
         overlayLabels={{
           left: {
             element: (
-              <Entypo name="circle-with-cross" size={100} color="red" />
+              <Entypo name="circle-with-cross" size={100} color="red" /> //cross icon
             ),
             style: {
               wrapper: {
@@ -48,7 +48,7 @@ export default function App() {
           },
           right: {
             element: (
-              <AntDesign name="checkcircle" size={100} color="yellowgreen" />
+              <AntDesign name="checkcircle" size={100} color="yellowgreen" /> //check icon
             ),
             style: {
               wrapper: {
@@ -61,7 +61,7 @@ export default function App() {
             }
           },
         }}
-      // onSwipedLeft={() => setIndex((index + 1) % data.length)} // Update the index when swiped left
+
       />
       {/* <StatusBar style="auto" /> */}
     </View>
@@ -85,10 +85,5 @@ const styles = StyleSheet.create({
     width: 326,
     maxHeight: 550
   },
-  // iconContainer: {
-  //   shadowColor: 'rgba(0.5, 0.5, 0.5, 0.5)', // Shadow color
-  //   shadowOffset: { width: 0, height: 2 }, // Shadow offset
-  //   shadowOpacity: 1, // Shadow opacity
-  //   shadowRadius: 20,
-  // },
+
 });
